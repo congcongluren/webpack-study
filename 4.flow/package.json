@@ -1,0 +1,14 @@
+{
+  "name": "4.flow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --inspect-brk ./mode_modules/webpack-cli/bin/cli.js",
+    "build": "webpack",
+    "start": "node debugger.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

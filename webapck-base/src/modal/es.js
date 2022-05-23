@@ -18,6 +18,6 @@ function require(moduleId) {
   return module.exports;
 }
 
-let title = require('./src/title.js');
+let title = require('./src/title.js.js');
 
 console.log(title);

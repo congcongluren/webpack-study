@@ -4,14 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --inspect-brk ./node_modules/webpack-cli/bin/cli.js",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "babel-loader": "^8.2.5",
+    "babel-plugin-import": "^1.13.5",
+    "clean-webpack-plugin": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "@babel/generator": "^7.18.0",
+    "@babel/parser": "^7.18.0",
+    "@babel/traverse": "^7.18.0",
+    "@babel/types": "^7.18.0",
+    "lodash": "^4.17.21"
   }
 }
