@@ -1,5 +1,5 @@
 function loader(source) {
-  console.log('//loader2');
+  console.log(source, '--loader2');
   return source + '//loader2'
 }
 
