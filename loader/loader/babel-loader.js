@@ -1,13 +1,16 @@
 const core = require('@babel/core');
-const { getOptions } = require('loader-utils');
-
-function loader(source) {
+function loader(source, inputSourceMap) {
   // this 是loader函数的this指针, loadercontext 对象
-  const options = getOptions(this);
+  const options = this.getOptions();
+  const loaderOptions = {
+    ...options,
+    inputSourceMap,
+    sourceMaps: true,
+    filename: this.resourcePath
+  };
   // code 转义后的代码  源代码，转义后的代码，映射文件  抽象语法树
-  let {code, map, ast} = core.transform(source, options);
+  let {code, map, ast} = core.transform(source, loaderOptions);
 
-  console.log(code, options);
   this.callback(null, code, map, ast);
 
   // console.log("bable-loader");
